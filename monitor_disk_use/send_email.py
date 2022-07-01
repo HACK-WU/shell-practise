@@ -38,7 +38,7 @@ if __name__ == '__main__':
     email_body="天天开心！！！"
     email_info={
         "sender":"hackwu@qq.com",             #发件方的邮件地址
-        "key":"npavwdttamtodcig",             #发件方的SMTP服务授权码
+        "key":"*************",             #发件方的SMTP服务授权码
         "receiver":"hackwu@qq.com",       #收件方的邮件地址
         "subject":subject,                    #主题内容
         "body":email_body                     #邮件正文内容
