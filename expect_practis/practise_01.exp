@@ -1,0 +1,9 @@
+#!/usr/bin/expect
+spawn ./ask.sh		#运行具有交互功能的程序
+expect {
+	name {send "hackwu\r";exp_continue }
+	old { send "20\r";exp_continue}
+	study { send "linux\r"; exp_continue}
+	happy { send "yes\r";}
+}
+expect eof

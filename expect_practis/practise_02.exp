@@ -1,0 +1,20 @@
+#!/usr/bin/expect
+# author；hackwu
+# 2022/7/2
+# 练习使用位置参数变量
+
+set timeout 2
+set NAME [ lindex $argv 0 ]
+set AGE [ lindex $argv 1 ]
+set OBJ [ lindex $argv 2 ]
+set FEEL [ lindex $argv 3 ]
+
+
+spawn ./ask.sh		#运行具有交互功能的程序
+expect {
+	name {send "$NAME\r";exp_continue }
+	old { send "$AGE\r";exp_continue}
+	study { send "$OBJ\r"; exp_continue}
+	happy { send "$FEEL\r";}
+}
+expect eof
